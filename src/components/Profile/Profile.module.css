@@ -17,11 +17,15 @@
 }
 .name{
 font-weight: 500;
+margin-bottom: 5px;
 }
 .tag{
+	margin-top: 0;
+	margin-bottom: 10px;
 
 }
 .location{
+	margin-bottom: 10px;
 	
 }
 .stats{

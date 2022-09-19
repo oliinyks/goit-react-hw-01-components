@@ -1,0 +1,31 @@
+.statistics{
+margin-bottom: 40px;
+}
+.title{
+text-align: center;
+font-weight: 500;
+}
+.statList{
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+.item{
+	border: 1px dashed black;
+	padding: 15px;
+	background-color: beige;
+}
+.item:first-child{
+	height: 100%;
+	margin-top: 10px;
+
+}
+.item + .item{
+	margin-left: 15px;
+}
+.label{
+font-weight: 500;
+}
+.percentage{
+	margin-left: 5px;
+}
