@@ -3,6 +3,6 @@ import data from './transactions.json';
 
 export const TransactionHistoryData = () => {
 	return(
-		<TransactionHistory transaction = {data}/>
+		<TransactionHistory transactions = {data}/>
 	);
 };

@@ -1,29 +1,29 @@
 import PropTypes from 'prop-types';
-import css from './Statistics.module.css';
+import {StatisticsContainer, Title, StatList, StatItem, Label, Percentage} from './Statistics.styled';
 
 export const Statistics = ({title, stats}) =>{
 	return(
-<section className={css.statistics}>
-  {title && <h2 className={css.title}>{title}</h2>}
-  <ul className={css.statList}>
+<StatisticsContainer>
+  {title && <Title>{title}</Title>}
+  <StatList>
 {stats.map(item => (
-    <li className={css.item} key = {item.id}>
-      <span className={css.label}>{item.label}</span>
-      <span className={css.percentage}>{item.percentage}%</span>
-    </li>
+    <StatItem key = {item.id}>
+      <Label>{item.label}</Label>
+      <Percentage>{item.percentage}%</Percentage>
+    </StatItem>
 ))}
-  </ul>
-</section>
+  </StatList>
+</StatisticsContainer>
 	)
 }
 
 Statistics.propTypes = {
-	title: PropTypes.string,
+	title: PropTypes.string.isRequired,
 	stats: PropTypes.arrayOf(
 		PropTypes.shape({
-			label: PropTypes.string,
-			percentage: PropTypes.number,
-			id: PropTypes.string,
+			label: PropTypes.string.isRequired,
+			percentage: PropTypes.number.isRequired,
+			id: PropTypes.string.isRequired,
 		})
 	),
 }
